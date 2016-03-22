@@ -46,4 +46,21 @@ RSpec.describe Api::V1::IdeasController, type: :controller do
     end
   end
 
+  describe "#delete" do
+    it "deletes an idea" do
+      create_ideas(2)
+      old_ideas = Idea.count
+
+      delete :destroy, id: Idea.last.id, format: :json
+
+      new_ideas = Idea.count
+
+      expect(response.status).to eq(204)
+      expect(response.body).to   eq("")
+
+      expect(new_ideas).to             eq(1)
+      expect(new_ideas - old_ideas).to eq(-1)
+    end
+  end
+
 end
