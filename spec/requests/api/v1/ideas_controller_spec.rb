@@ -46,6 +46,29 @@ RSpec.describe Api::V1::IdeasController, type: :controller do
     end
   end
 
+  describe "#update" do
+    it "updates an idea" do
+      idea = create_idea
+      old_ideas = Idea.count
+
+      idea_params = { title: "updated title", body: "updated body" }
+
+      put :update, id: idea.id, title: idea_params[:title], body: idea_params[:body], format: :json
+
+      new_ideas = Idea.count
+      idea = Idea.find(idea.id)
+
+      expect(response.status).to eq(204)
+      expect(response.body).to   eq("")
+
+      expect(idea.title).to eq(idea_params[:title])
+      expect(idea.body).to  eq(idea_params[:body])
+
+      expect(new_ideas).to             eq(1)
+      expect(new_ideas - old_ideas).to eq(0)
+    end
+  end
+
   describe "#delete" do
     it "deletes an idea" do
       create_ideas(2)
