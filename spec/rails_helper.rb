@@ -8,15 +8,15 @@ require 'rspec/rails'
 
 ActiveRecord::Migration.maintain_test_schema!
 
-def create_idea
-  Idea.create(title: "idea title", body: "idea body")
-end
-
-def create_ideas(num)
-  num.times do |x|
-    Idea.create(title: "idea title #{x}", body: "idea body #{x}", quality: x)
+  def create_idea
+    Idea.create(title: "idea title", body: "idea body")
   end
-end
+
+  def create_ideas(num)
+    num.times do |x|
+      Idea.create(title: "idea title #{x}", body: "idea body #{x}", quality: x)
+    end
+  end
 
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
