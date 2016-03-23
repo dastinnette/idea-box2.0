@@ -5,7 +5,7 @@ function renderIdea(idea){
     + "</h5><p>"
     + idea.body
     + "<br>This idea is: "
-    + "<div class='idea-quality'>"+ idea.quality +"</div>"
+    + "<div class='idea-quality idea-color'>"+ idea.quality +"</div>"
     + "</p>"
     + "<button class='like-idea btn orange accent-4'><icon class='material-icons left'>thumb_up</icon></button>"
     + "<div class='divider'/>"
