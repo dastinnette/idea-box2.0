@@ -8,6 +8,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'pg'
 gem 'responders'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'pry'
