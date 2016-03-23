@@ -1,5 +1,5 @@
 function renderIdea(idea){
-  $('#ideas').append(
+  $('#ideas').prepend(
     "<div class='idea' data-id='" + idea.id +"'><h2>"
     + idea.title
     + "</h2><p>"
@@ -15,8 +15,8 @@ function renderIdea(idea){
 function fetchIdeas(){
   $.ajax({
     type: "GET",
-    url : '/api/v1/ideas.json',
-    success : function(ideas) {
+    url: '/api/v1/ideas.json',
+    success: function(ideas) {
       $.each(ideas, function(index, idea){
         renderIdea(idea)
       })
