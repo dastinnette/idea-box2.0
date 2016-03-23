@@ -11,7 +11,7 @@ function renderIdea(idea){
     + "<div class='divider'/>"
     + "<button id='dislike-idea' class='btn orange accent-4'><icon class='material-icons left'>thumb_down</icon></button>"
     + "<div class='divider'/>"
-    + "<button id='delete-idea' class='btn orange accent-4'><icon class='material-icons left'>delete_forever</icon></button>"
+    + "<button class='delete-idea btn orange accent-4'><icon class='material-icons left'>delete_forever</icon></button>"
     + "</div><br>"
   )
 }
