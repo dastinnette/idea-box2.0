@@ -2,13 +2,13 @@ var increaseQuality = {
   swill: 'plausible',
   plausible: 'genius',
   genius: 'genius'
-}
+};
 
 var decreaseQuality = {
   swill: 'swill',
   plausible: 'swill',
   genius: 'plausible'
-}
+};
 
 function likeIdea(){
   $('#ideas').delegate('.like-idea', 'click', function(){
@@ -22,15 +22,15 @@ function likeIdea(){
       type: 'PUT',
       url: '/api/v1/ideas/' + ideaId,
       data: data,
-      success: function() {
+      success: function(){
         quality.text(increaseQuality[qualityText]);
       }
     })
   })
 };
 
-function dislikeIdea() {
-  $('#ideas').delegate('.dislike-idea', 'click', function() {
+function dislikeIdea(){
+  $('#ideas').delegate('.dislike-idea', 'click', function(){
     var idea    = $(this).closest('.idea');
     var ideaId  = idea.attr('data-id');
     var quality = idea.find('.idea-quality');
@@ -41,7 +41,7 @@ function dislikeIdea() {
       type: 'PUT',
       url: '/api/v1/ideas/' + ideaId,
       data: data,
-      success: function() {
+      success: function(){
         quality.text(decreaseQuality[qualityText]);
       }
     })
