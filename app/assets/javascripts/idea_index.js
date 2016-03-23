@@ -7,7 +7,11 @@ function renderIdea(idea){
     + "<br>This idea is: "
     + idea.quality
     + "</p>"
-    + "<button id='delete-idea' class='btn btn-default btn-xs'>Delete</button>"
+    + "<button id='like-idea' class='btn orange accent-4'><icon class='material-icons left'>thumb_up</icon></button>"
+    + "<div class='divider'/>"
+    + "<button id='dislike-idea' class='btn orange accent-4'><icon class='material-icons left'>thumb_down</icon></button>"
+    + "<div class='divider'/>"
+    + "<button id='delete-idea' class='btn orange accent-4'><icon class='material-icons left'>delete_forever</icon></button>"
     + "</div><br>"
   )
 }
