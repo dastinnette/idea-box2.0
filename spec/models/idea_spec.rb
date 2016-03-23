@@ -14,10 +14,10 @@ RSpec.describe Idea, type: :model do
     expect(idea).to be_invalid
   end
 
-  it "has a default value of 0" do
+  it "has a default value of swill" do
     idea = Idea.create(title: "Wear more suspenders", body: "All day, erry day")
 
-    expect(idea.quality).to eq(0)
+    expect(idea.quality).to eq("swill")
   end
 
 end
