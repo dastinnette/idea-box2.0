@@ -1,13 +1,13 @@
 function renderIdea(idea){
   $('#ideas').prepend(
-    "<div class='idea' data-id='" + idea.id +"'><h2>"
+    "<div class='idea' data-id='" + idea.id +"'><h3>"
     + idea.title
-    + "</h2><p>"
+    + "</h3><p>"
     + idea.body
     + "<br>"
     + idea.quality
     + "</p>"
-    + "<button id='delete-idea' name='button-fetch' class='btn btn-default btn-xs'>Delete</button>"
+    + "<button id='delete-idea' class='btn btn-default btn-xs'>Delete</button>"
     + "</div>"
   )
 }
