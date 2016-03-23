@@ -5,4 +5,5 @@ $(document).ready(function() {
   likeIdea()
   dislikeIdea()
   updateIdeaTitle()
+  updateIdeaBody()
 })

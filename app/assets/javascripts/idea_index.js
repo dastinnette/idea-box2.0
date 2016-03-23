@@ -2,9 +2,9 @@ function renderIdea(idea){
   $('#ideas').prepend(
     "<div class='idea' data-id='" + idea.id +"'><h5 class='idea-title' contentEditable = 'true'>"
     + idea.title
-    + "</h5><p class='idea-color' contentEditable = 'true'>"
+    + "</h5><p class='idea-body' contentEditable = 'true'>"
     + idea.body
-    + "</p><p class='idea-quality idea-color'>This idea is: "
+    + "</p><p class='idea-quality'>This idea is: "
     + idea.quality
     + "</p>"
     + "<button class='like-idea btn orange accent-4'><icon class='material-icons left'>thumb_up</icon></button>"
