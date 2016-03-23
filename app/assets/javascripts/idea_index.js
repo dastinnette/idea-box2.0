@@ -1,11 +1,11 @@
 function renderIdea(idea){
   $('#ideas').prepend(
-    "<div class='idea' data-id='" + idea.id +"'><h5>"
+    "<div class='idea' data-id='" + idea.id +"'><h5 contentEditable = 'true'>"
     + idea.title
-    + "</h5><p>"
+    + "</h5><p class='idea-color' contentEditable = 'true'>"
     + idea.body
-    + "<br>This idea is: "
-    + "<div class='idea-quality idea-color'>"+ idea.quality +"</div>"
+    + "</p><p class='idea-quality idea-color'>This idea is: "
+    + idea.quality
     + "</p>"
     + "<button class='like-idea btn orange accent-4'><icon class='material-icons left'>thumb_up</icon></button>"
     + "<div class='divider'/>"
