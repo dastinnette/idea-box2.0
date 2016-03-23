@@ -1,6 +1,6 @@
 function renderIdea(idea){
   $('#ideas').prepend(
-    "<div class='idea' data-id='" + idea.id +"'><h5 contentEditable = 'true'>"
+    "<div class='idea' data-id='" + idea.id +"'><h5 class='idea-title' contentEditable = 'true'>"
     + idea.title
     + "</h5><p class='idea-color' contentEditable = 'true'>"
     + idea.body
