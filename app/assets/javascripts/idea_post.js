@@ -1,7 +1,7 @@
 function postIdea(){
   $('#create-id').click(function(){
-    var ideaPost = { title: $('#title').val(),
-                     body: $('#body').val()
+    var ideaPost = { title: $('.title').val(),
+                     body: $('.body').val()
                    }
     $.ajax({
       type: "POST",

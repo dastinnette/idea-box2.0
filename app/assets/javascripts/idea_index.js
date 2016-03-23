@@ -5,13 +5,13 @@ function renderIdea(idea){
     + "</h5><p>"
     + idea.body
     + "<br>This idea is: "
-    + idea.quality
+    + "<div class='idea-quality idea-color'>"+ idea.quality +"</div>"
     + "</p>"
-    + "<button id='like-idea' class='btn orange accent-4'><icon class='material-icons left'>thumb_up</icon></button>"
+    + "<button class='like-idea btn orange accent-4'><icon class='material-icons left'>thumb_up</icon></button>"
     + "<div class='divider'/>"
-    + "<button id='dislike-idea' class='btn orange accent-4'><icon class='material-icons left'>thumb_down</icon></button>"
+    + "<button class='dislike-idea btn orange accent-4'><icon class='material-icons left'>thumb_down</icon></button>"
     + "<div class='divider'/>"
-    + "<button id='delete-idea' class='btn orange accent-4'><icon class='material-icons left'>delete_forever</icon></button>"
+    + "<button class='delete-idea btn orange accent-4'><icon class='material-icons left'>delete_forever</icon></button>"
     + "</div><br>"
   )
 }
