@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::V1::IdeasController, type: :controller do
 
   describe "#index" do
-    scenario "returns all ideas" do
+    it "returns all ideas" do
       create_ideas(2)
 
       get :index, format: :json
@@ -24,7 +24,7 @@ RSpec.describe Api::V1::IdeasController, type: :controller do
   end
 
   describe "#create" do
-    scenario "adds a new idea" do
+    it "adds a new idea" do
       old_ideas = Idea.count
       params = { title: "Get more fiber in your diet", body: "Eat a book" }
 

@@ -6,6 +6,7 @@ RSpec.describe Idea, type: :model do
     idea = Idea.create(title: "Wear more suspenders", body: "All day, erry day")
 
     expect(idea.quality).to eq("swill")
+    expect(idea.quality).to_not eq("genius")
   end
 
 end
