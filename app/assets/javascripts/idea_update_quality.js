@@ -13,7 +13,7 @@ var decreaseQuality = {
 function likeIdea(){
   $('#ideas').delegate('.like-idea', 'click', function(){
     var $idea   = $(this).closest('.idea')
-    var quality = idea.find('.idea-quality')
+    var quality = $idea.find('.idea-quality')
     var qualityText = quality.text()
     var data = { quality: increaseQuality[qualityText] }
 
@@ -31,7 +31,7 @@ function likeIdea(){
 function dislikeIdea(){
   $('#ideas').delegate('.dislike-idea', 'click', function(){
     var $idea   = $(this).closest('.idea')
-    var quality = idea.find('.idea-quality')
+    var quality = $idea.find('.idea-quality')
     var qualityText = quality.text()
     var data = { quality: decreaseQuality[qualityText] }
 

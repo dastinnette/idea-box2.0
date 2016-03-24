@@ -4,7 +4,9 @@ function renderIdea(idea){
     + idea.title
     + "</h5><p class='idea-body' contentEditable = 'true'>"
     + idea.body
-    + "</p><p class='idea-quality'>This idea is: "
+    + "</p>"
+    + "<p>This idea is: </p>"
+    + "<p class='idea-quality'>"
     + idea.quality
     + "</p>"
     + "<button class='like-idea btn orange accent-4'><icon class='material-icons left'>thumb_up</icon></button>"
