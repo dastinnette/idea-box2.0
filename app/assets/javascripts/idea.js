@@ -6,4 +6,5 @@ $(document).ready(function() {
   dislikeIdea()
   updateIdeaTitle()
   updateIdeaBody()
+  searchIdeas()
 })
