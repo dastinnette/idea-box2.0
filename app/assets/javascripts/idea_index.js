@@ -3,7 +3,7 @@ function renderIdea(idea){
     "<div class='idea' data-id='" + idea.id +"'><h5 class='idea-title' contentEditable = 'true'>"
     + idea.title
     + "</h5><p class='idea-body' contentEditable = 'true'>"
-    + idea.body
+    + truncate(idea.body)
     + "</p>"
     + "<p>This idea is: </p>"
     + "<p class='idea-quality'>"
