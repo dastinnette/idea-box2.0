@@ -1,4 +1,4 @@
-function postIdea(){
+function newIdea(){
   $('#create-id').click(function(){
     var ideaPost = { title: $('.title').val(),
                      body: $('.body').val()
@@ -7,17 +7,15 @@ function postIdea(){
       type: "POST",
       url: '/api/v1/ideas.json',
       data: ideaPost,
-      success: function(ideas) {
-        renderIdea(ideas)
-        clearInputField()
+      success: function(response){
+        renderIdea(response),
+        clearInputFields()
       }
     })
-
   })
+}
 
-  function clearInputField(){
-    $('#title').val("")
-    $('#body').val("")
-  }
-
+function clearInputFields(){
+  $('#title').val("")
+  $('#body').val("")
 }

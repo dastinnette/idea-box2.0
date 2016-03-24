@@ -1,6 +1,6 @@
 $(document).ready(function() {
   fetchIdeas()
-  postIdea()
+  newIdea()
   deleteIdea()
   likeIdea()
   dislikeIdea()
