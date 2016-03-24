@@ -4,4 +4,6 @@ $(document).ready(function() {
   deleteIdea()
   likeIdea()
   dislikeIdea()
+  updateIdeaTitle()
+  updateIdeaBody()
 })
