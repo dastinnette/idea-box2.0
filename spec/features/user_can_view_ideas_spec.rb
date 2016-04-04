@@ -13,7 +13,8 @@ RSpec.feature "user visits root" do
     end
 
     within('.search-field') do
-      expect(page).to have_content 'Search for an idea and click on a title or description to edit'
+      expect(page).to have_content 'Search for an idea or click on an idea\'s
+                                    title or description to edit'
     end
   end
 
